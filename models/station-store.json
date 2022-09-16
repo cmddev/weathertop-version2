@@ -1,62 +1,6 @@
 {
   "stationCollection": [
     {
-      "id": "520ecd30-35c3-11ed-9509-a97fd6ecc947",
-      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
-      "title": "new",
-      "readings": []
-    },
-    {
-      "id": "6596c5d0-35c6-11ed-9355-4b9d15181373",
-      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
-      "title": "waterford",
-      "readings": []
-    },
-    {
-      "id": "ed70a130-35ce-11ed-ab8d-8146fe8b240f",
-      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
-      "title": "new station",
-      "readings": [
-        {
-          "id": "f2d89a10-35ce-11ed-ab8d-8146fe8b240f",
-          "code": "new",
-          "artist": "",
-          "duration": 0
-        },
-        {
-          "id": "f376fcf0-35ce-11ed-ab8d-8146fe8b240f",
-          "code": "",
-          "artist": "",
-          "duration": 0
-        },
-        {
-          "id": "f43ee0d0-35ce-11ed-ab8d-8146fe8b240f",
-          "code": "",
-          "artist": "",
-          "duration": 0
-        },
-        {
-          "id": "f5d27920-35ce-11ed-ab8d-8146fe8b240f",
-          "code": "new",
-          "artist": "",
-          "duration": 0
-        },
-        {
-          "id": "15573170-35d7-11ed-ab8d-8146fe8b240f",
-          "code": "abc",
-          "artist": "abc",
-          "duration": 3
-        },
-        {
-          "id": "61e04850-35d8-11ed-8f87-0900aba63b68",
-          "code": "abc",
-          "artist": "ab",
-          "duration": 2
-        }
-      ],
-      "duration": 5
-    },
-    {
       "id": "8e78ba20-35db-11ed-8f2d-c1b40d1d764f",
       "userid": "86e7edd0-35db-11ed-8f2d-c1b40d1d764f",
       "title": "donegal",
@@ -70,6 +14,25 @@
         {
           "id": "ad779a40-35db-11ed-8f2d-c1b40d1d764f",
           "artist": "1",
+          "duration": 1
+        }
+      ],
+      "duration": 1
+    },
+    {
+      "id": "9fe67df0-35e1-11ed-9137-43b673914ef3",
+      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
+      "title": "Cork",
+      "readings": []
+    },
+    {
+      "id": "a4109fa0-35e1-11ed-9137-43b673914ef3",
+      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
+      "title": "Dublin",
+      "readings": [
+        {
+          "id": "23644bd0-35e2-11ed-9137-43b673914ef3",
+          "artist": "abc",
           "duration": 1
         }
       ],
