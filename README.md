@@ -1,4 +1,4 @@
-Welcome to the Glitch Template
+Weather Top Version 2 Assignment
 ==============================
 
 A starter project for learning Glitch.
