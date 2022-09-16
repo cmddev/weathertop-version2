@@ -1,0 +1,18 @@
+<form class="ui stacked segment form" action="/dashboard/addstation" method="POST">
+  <div class="field">
+    <h3>Start tracking weather trends at a new location</h3>
+    <label>Title</label>
+    <input placeholder="Station Name" type="text" name="title" required>
+  </div>
+  <div class="field">
+    <label>Latitude</label>
+    <input placeholder="00.00" type="number" name="latitude" step="0.00000001" >
+  </div>
+
+  <div class="field">
+    <label>Longitude</label>
+    <input placeholder="00.00" type="number"  name="longitude" step="0.00000001">
+  </div>
+
+  <button class="ui blue submit button">Add New Station</button>
+</form>
