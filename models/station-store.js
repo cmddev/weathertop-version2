@@ -22,7 +22,7 @@ const stationStore = {
   },
 
   addStation(station) {
-    this.store.add(this.collection, station);
+    this.store.add(this.collection, station, station.latitude, station.longitude);
     this.store.save();
   },
 
@@ -40,13 +40,6 @@ const stationStore = {
   addReading(id, reading) {
     const station = this.getStation(id);
     station.readings.push(reading);
-
-    let duration = 0;
-    for (let i = 0; i < station.readings.length; i++) {
-      duration += station.readings[i].duration;
-    }
-
-    station.duration = duration;
     this.store.save();
   },
 
@@ -64,9 +57,11 @@ const stationStore = {
   },
 
   updateReading(reading, updatedReading) {
-    reading.title = updatedReading.title;
-    reading.artist = updatedReading.artist;
-    reading.duration = updatedReading.duration;
+    reading.code = updatedReading.code;
+    reading.temperature = updatedReading.temperature;
+    reading.windSpeed = updatedReading.windSpeed;
+    reading.windDirection = updatedReading.windDirection;
+    reading.pressure = updatedReading.pressure;
     this.store.save();
   }
 };

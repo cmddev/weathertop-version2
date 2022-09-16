@@ -29,10 +29,12 @@ const dashboard = {
     const newStation = {
       id: uuid.v1(),
       userid: loggedInUser.id,
-      title: request.body.title,
+      name: request.body.name,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
       readings: []
     };
-    logger.debug("Creating a new Playlist", newStation);
+    logger.debug("Creating a new Station", newStation);
     stationStore.addStation(newStation);
     response.redirect("/dashboard");
   }

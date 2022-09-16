@@ -15,7 +15,8 @@ router.get("/signup", accounts.signup);
 router.get("/logout", accounts.logout);
 router.post("/register", accounts.register);
 router.post("/authenticate", accounts.authenticate);
-
+router.get("/myprofile", accounts.userDetails);
+router.post("/updateuser", accounts.updateUser);
 
 router.get("/dashboard", dashboard.index);
 router.get("/dashboard/deletestation/:id", dashboard.deleteStation);
@@ -27,7 +28,7 @@ router.get("/station/:id/deletereading/:readingid", station.deleteReading);
 router.post("/station/:id/addreading", station.addReading);
 
 router.get("/reading/:id/editreading/:readingid", reading.index);
-router.post("/reading/:id/updatereading/:readingid", reading.update);
+// router.post("/reading/:id/updatereading/:readingid", reading.update);
 router.get("/station/id", station.index);
 
 module.exports = router;

@@ -53,6 +53,21 @@ const accounts = {
   getCurrentUser(request) {
     const userEmail = request.cookies.station;
     return userstore.getUserByEmail(userEmail);
+  },
+
+  userDetails(request, response) {
+    let user = accounts.getCurrentUser(request);
+    response.render("myprofile", user);
+  },
+
+  updateUser(request, response) {
+    let user = accounts.getCurrentUser(request);
+    user.firstName = request.body.firstName;
+    user.lastName = request.body.lastName;
+    user.email = request.body.email;
+    user.password = request.body.password;
+    userstore.save();
+    response.render("login");
   }
 };
 

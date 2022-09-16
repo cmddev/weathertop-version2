@@ -1,42 +1,49 @@
 {
   "stationCollection": [
     {
-      "id": "8e78ba20-35db-11ed-8f2d-c1b40d1d764f",
-      "userid": "86e7edd0-35db-11ed-8f2d-c1b40d1d764f",
-      "title": "donegal",
+      "id": "c90103e0-35f5-11ed-85f0-c5b41ad89df3",
+      "userid": "c01e1510-35f5-11ed-85f0-c5b41ad89df3",
+      "name": "Cork",
+      "latitude": "20",
+      "longitude": "20",
       "readings": [
         {
-          "id": "91797700-35db-11ed-8f2d-c1b40d1d764f",
-          "title": "",
-          "artist": "",
-          "duration": 0
+          "id": "d385e2e0-35f5-11ed-85f0-c5b41ad89df3",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "100",
+          "windDirection": "100",
+          "pressure": "01",
+          "date": "Fri Sep 16 2022 14:29:05 GMT-0500 (Central Daylight Time)"
+        }
+      ]
+    },
+    {
+      "id": "26d9f980-3601-11ed-bd05-9bd3fdff455c",
+      "userid": "1add2080-3601-11ed-bd05-9bd3fdff455c",
+      "name": "Madison, Wisconsin",
+      "latitude": "100",
+      "longitude": "200",
+      "readings": [
+        {
+          "id": "56f16040-3601-11ed-8254-ff06322090e5",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "100",
+          "windDirection": "10",
+          "pressure": "100",
+          "date": "Fri Sep 16 2022 15:51:29 GMT-0500 (Central Daylight Time)"
         },
         {
-          "id": "ad779a40-35db-11ed-8f2d-c1b40d1d764f",
-          "artist": "1",
-          "duration": 1
+          "id": "58ad9590-3609-11ed-905a-1d769bb32f2e",
+          "code": "100",
+          "temperature": "200",
+          "windSpeed": "100",
+          "windDirection": "100",
+          "pressure": "1",
+          "date": "Fri Sep 16 2022 16:48:48 GMT-0500 (Central Daylight Time)"
         }
-      ],
-      "duration": 1
-    },
-    {
-      "id": "9fe67df0-35e1-11ed-9137-43b673914ef3",
-      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
-      "title": "Cork",
-      "readings": []
-    },
-    {
-      "id": "a4109fa0-35e1-11ed-9137-43b673914ef3",
-      "userid": "d0806d80-3565-11ed-98fe-f707d5e7ea17",
-      "title": "Dublin",
-      "readings": [
-        {
-          "id": "23644bd0-35e2-11ed-9137-43b673914ef3",
-          "artist": "abc",
-          "duration": 1
-        }
-      ],
-      "duration": 1
+      ]
     }
   ]
 }

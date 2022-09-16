@@ -2,7 +2,7 @@
 
 const logger = require("../utils/logger");
 const stationStore = require("../models/station-store");
-// const stationAnalytics = require("../utils/station-analytics");
+const stationAnalytics = require("../utils/station-analytics");
 const uuid = require("uuid");
 
 const station = {
@@ -10,15 +10,25 @@ const station = {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
     const station = stationStore.getStation(stationId);
-    const viewData = {
-      title: "Station",
-      station: station,
-      // stationSummary : {
-      //   //shortestSong : stationAnalytics.getShortestSong(station),
-      //   // duration : stationAnalytics.getStationDuration(station)
-      // }
-    };
-    response.render("station", viewData);
+    const latestReading = stationAnalytics.getLatestReading(station.readings);
+
+    if (latestReading) {
+      const viewData = {
+        title: "Station",
+        station: station,
+        stationChart: {
+          latestCode: latestReading.code,
+          latestWeatherCondition: stationAnalytics.getWeatherConditions,
+          latestTemp: latestReading.temperature,
+          latestTempFahrenheit: stationAnalytics.getFahrenheit(latestReading.temperature),
+          latestBeaufort: stationAnalytics.getBeaufort(latestReading.windSpeed),
+          latestWindSpeed: latestReading.windSpeed,
+          latestWindDirection: stationAnalytics.getWindDirection(latestReading.windSpeed),
+          latestPressure: latestReading.pressure,
+        },
+      };
+      response.render("station", viewData);
+    }
   },
 
   deleteReading(request, response) {
@@ -34,9 +44,12 @@ const station = {
     const station = stationStore.getStation(stationID);
     const newReading = {
       id: uuid.v1(),
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration)
+      code: request.body.code,
+      temperature: request.body.temperature,
+      windSpeed: request.body.windSpeed,
+      windDirection: request.body.windDirection,
+      pressure: request.body.pressure,
+      date: new Date().toString(),
     };
     logger.debug("New Reading = ", newReading);
     stationStore.addReading(stationID, newReading);

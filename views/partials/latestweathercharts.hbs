@@ -1,0 +1,68 @@
+<section class="green ui segment" action="/stations/${_station.id}/addnewreadings" method="POST">
+  <h2 class="ui header">
+    Station: {{station.name}}
+  </h2>
+  <p>Current Weather Conditions @ {{station.name}}</p>
+
+  <div class="ui equal width left aligned padded grid">
+    <div class="teal column">
+      <h4 class="header">{{station.name}}
+        <i class="right floated map marker icon large purple"></i></h4>
+      <h5>
+        lat: {{station.latitude}}
+        <br>
+        lng: {{station.longitude}}
+      </h5>
+    </div>
+
+    <div class="black column">
+      <h4 class="header">Weather <i class="right floated smog icon large red"></i></h4>
+      <!--            <i class="right floated $(_station.latestWeatherIcons} large red"></i>-->
+      <h5>{{station.latestCode}} </h5>
+    </div>
+
+    <div class="black column">
+      <h4 class="header">Temp
+        <i class="right floated temperature high icon large blue"></i>
+      </h4>
+      <h5>
+        {{station.latestTemp}} C
+        <br>
+        {{station.latestTempFahrenheit}} F
+        <br>
+        Min: {{station.minTemp}} C
+        <br>
+        Max: {{station.maxTemp}} C
+      </h5>
+    </div>
+
+    <div class="black column">
+      <h4 class="header"> Wind
+        <i class="right floated wind icon large green"></i></h4>
+      <h5> {{station.latestBeaufort}} bft
+        <br>
+        Compass: {{station.windCompass}}
+        <br>
+        Feels like: {{station.windChill}} C
+        <br>
+        Min: {{station.minWindSpeed}}
+        <br>
+        Max: {{station.maxWindSpeed}}
+
+      </h5>
+    </div>
+
+    <div class="black column">
+      <h4 class="header"> Pressure
+        <i class="right floated compress arrows alternate icon large orange"></i></h4>
+      <h5>{{station.latestPressure}} bpa
+        <br>
+        Min: {{station.minPressure}}
+        <br>
+        Max: {{station.maxPressure}}</h5>
+
+    </div>
+  </div>
+</section>
+
+

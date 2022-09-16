@@ -41,6 +41,34 @@
       "email": "seth",
       "password": "seth",
       "id": "86e7edd0-35db-11ed-8f2d-c1b40d1d764f"
+    },
+    {
+      "firstName": "New",
+      "lastName": "User",
+      "email": "newuser",
+      "password": "newuser",
+      "id": "f07261f0-35ee-11ed-a656-fda77e27013a"
+    },
+    {
+      "firstName": "Caroline",
+      "lastName": "Daly",
+      "email": "email@email.com",
+      "password": "email",
+      "id": "372a6110-35f4-11ed-a656-fda77e27013a"
+    },
+    {
+      "firstName": "Caroline",
+      "lastName": "Daly",
+      "email": "newaccount",
+      "password": "newaccount",
+      "id": "c01e1510-35f5-11ed-85f0-c5b41ad89df3"
+    },
+    {
+      "firstName": "Caroline",
+      "lastName": "Daly",
+      "email": "caroline@email.com",
+      "password": "secret",
+      "id": "1add2080-3601-11ed-bd05-9bd3fdff455c"
     }
   ]
 }
