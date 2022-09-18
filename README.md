@@ -19,3 +19,6 @@ Weather Top provides an interface for users of weather top devices to create acc
 5. Navigate to your given station and add additional weather details as needed. 
 
 Known Defects: 
+
+
+References Used during Development: 
