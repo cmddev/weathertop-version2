@@ -4,33 +4,35 @@ const stationStore = require("../models/station-store.js");
 const logger = require("./logger");
 const _ = require("lodash");
 const stationDataConversions = require("../utils/station-dataconversions");
-
+const { template } = require("lodash");
 
 const stationAnalytics = {
   getLatestWeather(station) {
-    let beaufort = null;
-    let windCompass = null;
-    let weatherConditionsText = null;
-    let weatherIcon = null;
-    let fahrenheit = null;
-    let maxTemp = null;
-    let minTemp = null;
-    let maxPressure = null;
-    let minPressure = null;
+
     if(station.readings.length > 0) {
       const latestReading = station.readings[station.readings.length - 1];
-      beaufort = stationDataConversions.getBeaufort(latestReading.windSpeed);
-      latestReading.beaufort = beaufort;
-      weatherConditionsText = stationDataConversions.getWeatherConditionsText(latestReading.code);
+      station.latestReading = latestReading;
+
+      station.fahrenheit = stationDataConversions.getFahrenheit(latestReading.temperature);
+      station.celsius = stationDataConversions.getCelsius(latestReading.temperature);
+      station.latestPressure = stationDataConversions.getPressure(latestReading.pressure);
+      // station.minTemp = stationAnalytics.getMinTemp(station.readings);
+      // station.maxTemp = stationAnalytics.getMaxTemp(station.readings);
+
+      // station.minPressure = stationAnalytics.getMinPressure(station.readings);
+      // station.maxPressure = stationAnalytics.getMaxPressure(station.readings);
+
+      station.beaufort = stationDataConversions.getBeaufort(latestReading.windSpeed);
+      // station.minWindSpeed = stationAnalytics.getMinWindSpeed(station.readings);
+      // station.maxWindSpeed = stationAnalytics.getMaxWindSpeed(station.readings);
+
+      station.windCompass = stationDataConversions.getWindCompass(latestReading.windDirection);
+      station.weatherConditionsText = stationDataConversions.getWeatherConditionsText(latestReading.code);
+      station.weatherIcon = stationDataConversions.getWeatherIcon(latestReading.code);
+
+
     }
-
   },
-
-
-
-
-
-
 
 getMinTemp(station) {
   let minTemp = null;

@@ -42,6 +42,66 @@
           "windDirection": "100",
           "pressure": "1",
           "date": "Fri Sep 16 2022 16:48:48 GMT-0500 (Central Daylight Time)"
+        },
+        {
+          "id": "b57b7920-379b-11ed-be87-515ba79557a3",
+          "code": "100",
+          "temperature": "10",
+          "windSpeed": "10",
+          "windDirection": "10",
+          "pressure": "10",
+          "date": "Sun Sep 18 2022",
+          "beaufort": 2
+        },
+        {
+          "id": "48e49840-379c-11ed-be87-515ba79557a3",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "100",
+          "windDirection": "100",
+          "pressure": "100",
+          "date": "Sun Sep 18 2022",
+          "beaufort": 10
+        },
+        {
+          "id": "718b8bf0-379c-11ed-ae8b-5d994d227e04",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "100",
+          "windDirection": "100",
+          "pressure": "100",
+          "date": "Sun Sep 18 2022",
+          "dateTime": "16:54:17 GMT-0500 (Central Daylight Time)",
+          "beaufort": 10
+        },
+        {
+          "id": "7ac5c280-379c-11ed-ae8b-5d994d227e04",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "100",
+          "windDirection": "100",
+          "pressure": "100",
+          "date": "Sun Sep 18 2022",
+          "dateTime": "16:54:33 GMT-0500 (Central Daylight Time)",
+          "beaufort": 10
+        }
+      ]
+    },
+    {
+      "id": "335121c0-37a5-11ed-aaef-31b5f05b9aed",
+      "userid": "e56e4b70-379c-11ed-ae8b-5d994d227e04",
+      "name": "NEW STATION",
+      "latitude": "100",
+      "longitude": "100",
+      "readings": [
+        {
+          "id": "392549f0-37a5-11ed-aaef-31b5f05b9aed",
+          "code": "100",
+          "temperature": "100",
+          "windSpeed": "1231",
+          "windDirection": "121",
+          "pressure": "1231",
+          "date": "Sun Sep 18 2022 17:57:08 GMT-0500 (Central Daylight Time)"
         }
       ]
     }

@@ -19,6 +19,7 @@
       <h4 class="header">Weather <i class="right floated smog icon large red"></i></h4>
       <!--            <i class="right floated $(_station.latestWeatherIcons} large red"></i>-->
       <h5>{{station.weatherConditionsText}} </h5>
+      <h5>{{station.weatherIcon}}</h5>
     </div>
 
     <div class="black column">
@@ -26,28 +27,28 @@
         <i class="right floated temperature high icon large blue"></i>
       </h4>
       <h5>
-        {{station.latestTemp}} C
+        {{station.celsius}} C
         <br>
-        {{fahrenheit}} F
+        {{station.fahrenheit}} F
         <br>
-        Min: {{minTemp}} C
+        Min: {{station.minTemp}} C
         <br>
-        Max: {{maxTemp}} C
+        Max: {{station.maxTemp}} C
       </h5>
     </div>
 
     <div class="black column">
       <h4 class="header"> Wind
         <i class="right floated wind icon large green"></i></h4>
-      <h5> {{latestreading.beaufort}} bft
+      <h5> {{station.beaufort}} bft
         <br>
-        Compass: {{windCompass}}
+        Compass: {{station.windCompass}}
         <br>
-        Feels like: {{station.windChill}} C
+<!--        Feels like: {{station.windChill}} C-->
         <br>
-        Min: {{minWindSpeed}}
+        Min: {{station.minWindSpeed}}
         <br>
-        Max: {{maxWindSpeed}}
+        Max: {{station.maxWindSpeed}}
 
       </h5>
     </div>
@@ -55,11 +56,11 @@
     <div class="black column">
       <h4 class="header"> Pressure
         <i class="right floated compress arrows alternate icon large orange"></i></h4>
-      <h5>{{latestPressure}} bpa
+      <h5>{{station.latestPressure}} bpa
         <br>
-        Min: {{minPressure}}
+        Min: {{station.minPressure}}
         <br>
-        Max: {{maxPressure}}</h5>
+        Max: {{station.maxPressure}}</h5>
 
     </div>
   </div>

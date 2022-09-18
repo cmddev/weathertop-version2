@@ -69,6 +69,13 @@
       "email": "caroline@email.com",
       "password": "secret",
       "id": "1add2080-3601-11ed-bd05-9bd3fdff455c"
+    },
+    {
+      "firstName": "steve",
+      "lastName": "steve",
+      "email": "steve",
+      "password": "steve",
+      "id": "e56e4b70-379c-11ed-ae8b-5d994d227e04"
     }
   ]
 }

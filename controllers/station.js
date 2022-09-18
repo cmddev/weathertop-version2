@@ -10,15 +10,15 @@ const station = {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
     const station = stationStore.getStation(stationId);
-    const getLatestWeather = stationAnalytics.getLatestWeather(station);
+    stationAnalytics.getLatestWeather(station);
+    // const getLatestWeather = stationAnalytics.getLatestWeather(station);
 
       const viewData = {
         title: "Station",
         station: station,
-        getLatestWeather: getLatestWeather,
+
       };
       response.render("station", viewData);
-
   },
 
   deleteReading(request, response) {
@@ -40,6 +40,7 @@ const station = {
       windDirection: request.body.windDirection,
       pressure: request.body.pressure,
       date: new Date().toString(),
+      // dateTime: new Date().toTimeString(),
     };
     logger.debug("New Reading = ", newReading);
     stationStore.addReading(stationID, newReading);

@@ -123,6 +123,13 @@ const stationDataConversions = {
     return temperature * 9/5 + 32;
   },
 
+  getCelsius(temperature) {
+    return temperature;
+  },
+
+  getPressure(pressure) {
+    return pressure;
+  }
 }
 
 module.exports = stationDataConversions;
