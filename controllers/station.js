@@ -10,25 +10,15 @@ const station = {
     const stationId = request.params.id;
     logger.debug("Station id = ", stationId);
     const station = stationStore.getStation(stationId);
-    const latestReading = stationAnalytics.getLatestReading(station.readings);
+    const getLatestWeather = stationAnalytics.getLatestWeather(station);
 
-    if (latestReading) {
       const viewData = {
         title: "Station",
         station: station,
-        stationChart: {
-          latestCode: latestReading.code,
-          latestWeatherCondition: stationAnalytics.getWeatherConditions,
-          latestTemp: latestReading.temperature,
-          latestTempFahrenheit: stationAnalytics.getFahrenheit(latestReading.temperature),
-          latestBeaufort: stationAnalytics.getBeaufort(latestReading.windSpeed),
-          latestWindSpeed: latestReading.windSpeed,
-          latestWindDirection: stationAnalytics.getWindDirection(latestReading.windSpeed),
-          latestPressure: latestReading.pressure,
-        },
+        getLatestWeather: getLatestWeather,
       };
       response.render("station", viewData);
-    }
+
   },
 
   deleteReading(request, response) {
