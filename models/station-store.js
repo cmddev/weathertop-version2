@@ -56,12 +56,12 @@ const stationStore = {
     return readings[0];
   },
 
-  updateReading(reading, updatedReading) {
-    reading.code = updatedReading.code;
-    reading.temperature = updatedReading.temperature;
-    reading.windSpeed = updatedReading.windSpeed;
-    reading.windDirection = updatedReading.windDirection;
-    reading.pressure = updatedReading.pressure;
+  updateReading(reading, updateReading) {
+    reading.code = updateReading.code;
+    reading.temperature = updateReading.temperature;
+    reading.windSpeed = updateReading.windSpeed;
+    reading.windDirection = updateReading.windDirection;
+    reading.pressure = updateReading.pressure;
     this.store.save();
   }
 };

@@ -1,109 +1,48 @@
 {
   "stationCollection": [
     {
-      "id": "c90103e0-35f5-11ed-85f0-c5b41ad89df3",
-      "userid": "c01e1510-35f5-11ed-85f0-c5b41ad89df3",
-      "name": "Cork",
-      "latitude": "20",
-      "longitude": "20",
+      "id": "164aef00-3ab3-11ed-ab72-eff613435335",
+      "userid": "09361650-3ab3-11ed-ab72-eff613435335",
+      "name": "Cork, Ireland",
+      "latitude": "142.98",
+      "longitude": "198.23",
       "readings": [
         {
-          "id": "d385e2e0-35f5-11ed-85f0-c5b41ad89df3",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "100",
-          "windDirection": "100",
-          "pressure": "01",
-          "date": "Fri Sep 16 2022 14:29:05 GMT-0500 (Central Daylight Time)"
-        }
-      ]
-    },
-    {
-      "id": "26d9f980-3601-11ed-bd05-9bd3fdff455c",
-      "userid": "1add2080-3601-11ed-bd05-9bd3fdff455c",
-      "name": "Madison, Wisconsin",
-      "latitude": "100",
-      "longitude": "200",
-      "readings": [
-        {
-          "id": "56f16040-3601-11ed-8254-ff06322090e5",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "100",
-          "windDirection": "10",
-          "pressure": "100",
-          "date": "Fri Sep 16 2022 15:51:29 GMT-0500 (Central Daylight Time)"
+          "id": "22db0750-3ab3-11ed-ab72-eff613435335",
+          "code": "200",
+          "temperature": "23",
+          "windSpeed": "12",
+          "windDirection": "181",
+          "pressure": "982",
+          "date": "Thu Sep 22 2022 15:14:17 GMT-0500 (Central Daylight Time)"
         },
         {
-          "id": "58ad9590-3609-11ed-905a-1d769bb32f2e",
-          "code": "100",
-          "temperature": "200",
-          "windSpeed": "100",
-          "windDirection": "100",
-          "pressure": "1",
-          "date": "Fri Sep 16 2022 16:48:48 GMT-0500 (Central Daylight Time)"
-        },
-        {
-          "id": "b57b7920-379b-11ed-be87-515ba79557a3",
-          "code": "100",
+          "id": "2f647370-3ab4-11ed-a168-1da25558913f",
+          "code": "300",
           "temperature": "10",
-          "windSpeed": "10",
+          "windSpeed": "11",
           "windDirection": "10",
-          "pressure": "10",
-          "date": "Sun Sep 18 2022",
-          "beaufort": 2
-        },
-        {
-          "id": "48e49840-379c-11ed-be87-515ba79557a3",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "100",
-          "windDirection": "100",
-          "pressure": "100",
-          "date": "Sun Sep 18 2022",
-          "beaufort": 10
-        },
-        {
-          "id": "718b8bf0-379c-11ed-ae8b-5d994d227e04",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "100",
-          "windDirection": "100",
-          "pressure": "100",
-          "date": "Sun Sep 18 2022",
-          "dateTime": "16:54:17 GMT-0500 (Central Daylight Time)",
-          "beaufort": 10
-        },
-        {
-          "id": "7ac5c280-379c-11ed-ae8b-5d994d227e04",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "100",
-          "windDirection": "100",
-          "pressure": "100",
-          "date": "Sun Sep 18 2022",
-          "dateTime": "16:54:33 GMT-0500 (Central Daylight Time)",
-          "beaufort": 10
+          "pressure": "102",
+          "date": "Thu Sep 22 2022 15:21:48 GMT-0500 (Central Daylight Time)"
         }
-      ]
-    },
-    {
-      "id": "335121c0-37a5-11ed-aaef-31b5f05b9aed",
-      "userid": "e56e4b70-379c-11ed-ae8b-5d994d227e04",
-      "name": "NEW STATION",
-      "latitude": "100",
-      "longitude": "100",
-      "readings": [
-        {
-          "id": "392549f0-37a5-11ed-aaef-31b5f05b9aed",
-          "code": "100",
-          "temperature": "100",
-          "windSpeed": "1231",
-          "windDirection": "121",
-          "pressure": "1231",
-          "date": "Sun Sep 18 2022 17:57:08 GMT-0500 (Central Daylight Time)"
-        }
-      ]
+      ],
+      "latestReading": {
+        "id": "22db0750-3ab3-11ed-ab72-eff613435335",
+        "code": "200",
+        "temperature": "23",
+        "windSpeed": "12",
+        "windDirection": "181",
+        "pressure": "982",
+        "date": "Thu Sep 22 2022 15:14:17 GMT-0500 (Central Daylight Time)"
+      },
+      "fahrenheit": 73.4,
+      "celsius": "23",
+      "latestPressure": "982",
+      "beaufort": -1,
+      "windCompass": "South",
+      "weatherConditionsText": "Partial Clouds",
+      "weatherIcon": "cloud sun icon",
+      "maxTemp": "23"
     }
   ]
 }

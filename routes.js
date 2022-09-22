@@ -28,7 +28,7 @@ router.get("/station/:id/deletereading/:readingid", station.deleteReading);
 router.post("/station/:id/addreading", station.addReading);
 
 router.get("/reading/:id/editreading/:readingid", reading.index);
-// router.post("/reading/:id/updatereading/:readingid", reading.update);
+router.post("/reading/:id/updatereading/:readingid", reading.update);
 router.get("/station/id", station.index);
 
 module.exports = router;

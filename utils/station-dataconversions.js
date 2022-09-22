@@ -34,7 +34,7 @@ const stationDataConversions = {
       return 10;
     } else if (windSpeed > 103 && windSpeed <= 117) {
       return 11;
-    } else if (windSpeed >=118) {
+    } else if (windSpeed >= 118) {
       return 12;
     } else {
       return -1;
@@ -82,24 +82,24 @@ const stationDataConversions = {
 
   getWeatherConditionsText(code) {
     switch (code) {
-      case 100:
+      case "100":
         return "Clear and Sunny";
-      case 200:
+      case "200":
         return "Partial Clouds";
-      case 300:
+      case "300":
         return "Cloudy";
-      case 400:
+      case "400":
         return "Light Showers";
-      case 500:
+      case "500":
         return "Heavy Showers";
-      case 600:
+      case "600":
         return "Rain";
-      case 700:
+      case "700":
         return "Snow";
-      case 800:
+      case "800":
         return "Thunder/Struck";
-      default:
-        return "Unknown Conditions";
+      // default:
+      //   return "Unknown Conditions";
     }
   },
 
@@ -120,7 +120,7 @@ const stationDataConversions = {
   },
 
   getFahrenheit(temperature) {
-    return temperature * 9/5 + 32;
+    return temperature * 9 / 5 + 32;
   },
 
   getCelsius(temperature) {
@@ -129,7 +129,87 @@ const stationDataConversions = {
 
   getPressure(pressure) {
     return pressure;
-  }
+  },
+
+  getMaxTempAtStation(station) {
+    let maxTemp = null;
+    if (station.readings.length > 0) {
+      maxTemp = station.readings[0].temperature;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].temperature > maxTemp) {
+          maxTemp = station.readings[i].temperature;
+        }
+      }
+      return maxTemp;
+    }
+  },
+
+  getMinTempAtStation(station) {
+    let minTemp = null;
+    if (station.readings.length > 0) {
+      minTemp = station.readings[0].temperature;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].temperature < minTemp) {
+          minTemp = station.readings[i].temperature;
+        }
+      }
+      return minTemp;
+    }
+  },
+
+  getMinPressureAtStation(station) {
+    let minPressure = null;
+    if (station.readings.length > 0) {
+      minPressure = station.readings[0].pressure;
+      for (let i = 0; i < station.pressure.length; i++) {
+        if (station.readings[i].pressure < minPressure) {
+          minPressure = station.readings[i].pressure;
+        }
+      }
+      return minPressure;
+    }
+  },
+
+  getMaxPressureAtStation(station) {
+    let maxPressure = null;
+    if (station.readings.length > 0) {
+      maxPressure = station.readings[0].pressure;
+      for (let i = 0; i < station.readings.length; i++) {
+        if (station.readings[i].pressure > maxPressure) {
+          maxPressure = station.readings[i].pressure;
+        }
+      }
+      return maxPressure;
+    }
+  },
+  //
+  // getMinWindSpeedAtStation(station) {
+  //   let minWindSpeed = null;
+  //   if (station.readings.length > 0) {
+  //     minWindSpeed = station.readings[0].windSpeed;
+  //     for (let i = 0; i < station.pressure.length; i++) {
+  //       if (station.readings[i].windSpeed < minWindSpeed) {
+  //         minWindSpeed = station.readings[i].windSpeed;
+  //       }
+  //     }
+  //     return minWindSpeed;
+  //   }
+  // },
+  //
+  // getMaxWindSpeedAtStation(station) {
+  //   let maxWindSpeed = null;
+  //   if (station.readings.length > 0) {
+  //     maxWindSpeed = station.readings[0].pressure;
+  //     for (let i = 0; i < station.readings.length; i++) {
+  //       if (station.readings[i].pressure > maxWindSpeed) {
+  //         maxWindSpeed = station.readings[i].pressure;
+  //       }
+  //     }
+  //     return maxPressure;
+  //   }
+  // }
+
+
 }
 
 module.exports = stationDataConversions;
